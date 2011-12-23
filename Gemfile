@@ -1,13 +1,13 @@
 source 'http://rubygems.org'
 
-gem 'rails', git: 'https://github.com/rails/rails.git', branch: '3-2-stable'
+gem 'rails', '3.2.0.rc1'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails'
-  gem 'coffee-rails'
-  gem 'uglifier'
+  gem 'sass-rails',   '~> 3.2.0'
+  gem 'coffee-rails', '~> 3.2.0'
+  gem 'uglifier',     '>= 1.0.3'
 end
 
 gem 'jquery-rails'
@@ -23,8 +23,10 @@ gem 'mongoid-paperclip', require: 'mongoid_paperclip'
 gem 'dynamic_form'
 
 gem 'omniauth' # It's a sane default these days
+gem 'omniauth-facebook'
+gem 'omniauth-identity'
 
-gem 'pry' # For a better irb
+gem 'airbrake'
 
 group :production do
   gem 'thin'
