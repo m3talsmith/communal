@@ -24,23 +24,22 @@ If you are using RVM we have a .rvmrc file that will automatically create a gems
 
 If you don't have Ruby 1.9.2 installed:
 
-> rvm install 1.9.2
+    rvm install 1.9.2
 
 Install MongoDB (using ['Homebrew']('http://mxcl.github.com/homebrew/'))
 
-> brew install mongodb
+    brew install mongodb
 
 Follow the onscreen instructions, then download the project:
 
-> git clone git@github.com:rebelhold/communal.git
+    git clone git@github.com:rebelhold/communal.git
 
 And accept the gemset creation:
 
-> cd communal
+    cd communal
 
 Finally Bundle!
 
-> gem install bundler --no-ri --no-rdoc
->
-> bundle install
+    gem install bundler --no-ri --no-rdoc
+    bundle install
 
