@@ -1,14 +1,14 @@
 development:
   facebook:
-    consumer_key: <your_consumer_key>
-    consumer_secret: <your_consumer_secret>
+    consumer_key: 140973972639188
+    consumer_secret: 3f3290508b7e87346bea83b784d2d000
 
 test:
   facebook:
-    consumer_key: <your_consumer_key>
-    consumer_secret: <your_consumer_secret>
+    consumer_key: 140973972639188
+    consumer_secret: 3f3290508b7e87346bea83b784d2d000
 
 production:
   facebook:
-    consumer_key: <your_consumer_key>
-    consumer_secret: <your_consumer_secret>
+    consumer_key: 278028398912492
+    consumer_secret: c5b50969ed24da7040004a9b176796d9

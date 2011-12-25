@@ -156,8 +156,6 @@ GEM
       rack
     omniauth-facebook (1.1.0)
       omniauth-oauth2 (~> 1.0.0)
-    omniauth-identity (1.0.0)
-      omniauth (~> 1.0)
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
@@ -303,7 +301,6 @@ DEPENDENCIES
   mongoid-rspec
   omniauth
   omniauth-facebook
-  omniauth-identity
   powify
   rails (= 3.2.0.rc1)
   rails3-generators
