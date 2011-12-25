@@ -41,5 +41,6 @@ And accept the gemset creation:
 Finally Bundle!
 
 > gem install bundler --no-ri --no-rdoc
+>
 > bundle install
 
