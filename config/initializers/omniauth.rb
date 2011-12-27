@@ -6,6 +6,6 @@ Rails.application.config.middleware.use OmniAuth::Builder do
     provider_keys[Rails.env]['facebook']['consumer_key'],
     provider_keys[Rails.env]['facebook']['consumer_secret'],
     display: 'popup',
-    scope: 'access_token,offline_access'
+    scope: 'offline_access'
   )
 end

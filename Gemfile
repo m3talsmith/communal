@@ -12,7 +12,8 @@ end
 
 gem 'jquery-rails'
 
-gem 'mongoid',  '~> 2.0.0'
+# gem 'mongoid',  '~> 2.2.0'
+gem 'mongoid', git: 'git@github.com:rebelhold/mongoid.git', branch: '2.2.0-stable'
 gem 'bson_ext', '~> 1.2'
 gem 'rails3-generators'
 
@@ -38,6 +39,8 @@ group :development do
   # Boom Boom Pow
   gem 'powify'
   gem 'showoff-io'
+
+  gem 'unicorn'
 end
 
 group :test, :development do

@@ -1,0 +1,18 @@
+!!! 5
+%html
+  %head
+    %title Communal
+    = javascript_include_tag 'application'
+    = stylesheet_link_tag    'application'
+    = csrf_meta_tags
+  %body
+    %header
+      %h1 Communal
+      %h2 your link to the community
+      %ul
+        - if @current_user
+          %li #{@current_user.id} online
+          %li= link_to 'Logout'
+        - else
+          %li= link_to 'Facebook', '/auth/facebook'
+    = yield
