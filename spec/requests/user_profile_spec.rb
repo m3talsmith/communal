@@ -4,7 +4,7 @@ describe 'User Profile' do
 
   context 'Registration' do
 
-    it 'uses oauth' do
+    it 'uses facebook' do
       User.count.should == 0
       
       visit root_path
@@ -14,9 +14,14 @@ describe 'User Profile' do
       User.count.should   == 1
 
       user = User.first
-      user.providers.map(&:name).should include('default')
+      user.providers.map(&:name).should include('facebook')
       page.should have_content("#{user.id} online")
     end
+
+    it 'uses twitter'
+    it 'uses google'
+    it 'uses foursquare'
+    it 'uses identity'
 
   end
 
