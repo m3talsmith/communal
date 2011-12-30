@@ -19,6 +19,7 @@ RSpec.configure do |config|
   config.include Mongoid::Matchers
   config.include EmailSpec::Helpers
   config.include EmailSpec::Matchers
+  config.include Capybara::DSL
   config.extend  VCR::RSpec::Macros
 
   # Clean up the database

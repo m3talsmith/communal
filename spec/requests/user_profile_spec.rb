@@ -14,7 +14,7 @@ describe 'User Profile' do
       User.count.should   == 1
 
       user = User.first
-      user.providers.map(&:name).should include('default')
+      user.providers.map(&:name).should include('facebook')
       page.should have_content("#{user.id} online")
     end
 

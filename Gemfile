@@ -12,8 +12,7 @@ end
 
 gem 'jquery-rails'
 
-# gem 'mongoid',  '~> 2.2.0'
-gem 'mongoid', git: 'git@github.com:rebelhold/mongoid.git', branch: '2.2.0-stable'
+gem 'mongoid',  '~> 2.2.0'
 gem 'bson_ext', '~> 1.2'
 gem 'rails3-generators'
 
