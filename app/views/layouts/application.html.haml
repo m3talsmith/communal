@@ -12,7 +12,8 @@
       %ul
         - if @current_user
           %li #{@current_user.id} online
-          %li= link_to 'Logout'
+          %li= link_to 'Logout', logout_path
         - else
           %li= link_to 'Facebook', '/auth/facebook'
+          %li= link_to 'Twitter', '/auth/twitter'
     = yield
