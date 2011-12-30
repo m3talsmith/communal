@@ -155,6 +155,7 @@ GEM
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     nokogiri (1.5.0)
+    oauth (0.4.5)
     oauth2 (0.5.1)
       faraday (~> 0.7.4)
       multi_json (~> 1.0.3)
@@ -163,9 +164,14 @@ GEM
       rack
     omniauth-facebook (1.1.0)
       omniauth-oauth2 (~> 1.0.0)
+    omniauth-oauth (1.0.0)
+      oauth
+      omniauth (~> 1.0)
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
+    omniauth-twitter (0.0.7)
+      omniauth-oauth (~> 1.0)
     paperclip (2.4.5)
       activerecord (>= 2.3.0)
       activesupport (>= 2.3.2)
@@ -313,6 +319,7 @@ DEPENDENCIES
   mongoid-rspec
   omniauth
   omniauth-facebook
+  omniauth-twitter
   powify
   rails (= 3.2.0.rc1)
   rails3-generators

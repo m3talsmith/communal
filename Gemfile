@@ -25,6 +25,7 @@ gem 'dynamic_form'
 
 gem 'omniauth' # It's a sane default these days
 gem 'omniauth-facebook'
+gem 'omniauth-twitter'
 
 gem 'airbrake'
 

@@ -2,13 +2,22 @@ development:
   facebook:
     consumer_key: 140973972639188
     consumer_secret: 3f3290508b7e87346bea83b784d2d000
+  twitter:
+    consumer_key: bvRFWt6ZbF9LGV7PnA
+    consumer_secret: l5GfIJGy3YOJwkw7YkvLu3m19oBYYCShE6WtmsLQXk
 
 test:
   facebook:
     consumer_key: 140973972639188
     consumer_secret: 3f3290508b7e87346bea83b784d2d000
+  twitter:
+    consumer_key: bvRFWt6ZbF9LGV7PnA
+    consumer_secret: l5GfIJGy3YOJwkw7YkvLu3m19oBYYCShE6WtmsLQXk
 
 production:
   facebook:
     consumer_key: 278028398912492
     consumer_secret: c5b50969ed24da7040004a9b176796d9
+  twitter:
+    consumer_key: 56bbZ6YyVmInXmeTSeZMMg
+    consumer_secret: Of10OJg8MH4t2NXBXZwkmFQmS8WoN6gkLxKEwChA
