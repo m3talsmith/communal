@@ -5,6 +5,10 @@ module OmniauthSupport
     facebook: {
       token: '219318941446508|20effc615982726d5147c0c5.1-100002952898027|9ZOE0v7ejJPbB2yRLLN7iI9gxP4',
       uid:   '100002952898027'
+    },
+    twitter: {
+      token: '207138975-fANDtQGW8B5U4VAQhQHrp1bViL4np17HRfeYDYs',
+      uid:   '207138975'
     }
   }
   
@@ -17,6 +21,4 @@ module OmniauthSupport
       'uid' => credentials[:uid]
     })
   end
-
-  puts 'holla!'
 end

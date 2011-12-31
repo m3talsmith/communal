@@ -2,6 +2,8 @@ class User
   include Mongoid::Document
   include Mongoid::Timestamps
 
+  field :nickname
+
   embeds_many :providers
   class << self
     

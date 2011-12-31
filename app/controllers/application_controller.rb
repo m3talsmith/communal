@@ -9,4 +9,9 @@ private
     return true unless session[:user_id]
     @current_user ||= User.find(session[:user_id])
   end
+
+  def force_user
+    redirect_to new_session_path unless session[:user_id]
+    set_current_user
+  end
 end

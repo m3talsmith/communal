@@ -10,7 +10,7 @@ describe 'User Profile' do
       visit root_path
       click_link 'Facebook'
 
-      current_path.should == root_path
+      current_path.should == dashboard_path
       User.count.should   == 1
 
       user = User.first
@@ -18,7 +18,20 @@ describe 'User Profile' do
       page.should have_content("#{user.id} online")
     end
 
-    it 'uses twitter'
+    it 'uses twitter' do
+      User.count.should == 0
+      
+      visit root_path
+      click_link 'Twitter'
+
+      current_path.should == dashboard_path
+      User.count.should   == 1
+
+      user = User.first
+      user.providers.map(&:name).should include('twitter')
+      page.should have_content("#{user.id} online")
+    end
+
     it 'uses google'
     it 'uses foursquare'
     it 'uses identity'
@@ -26,7 +39,29 @@ describe 'User Profile' do
   end
 
   context 'Registered' do
-    pending 'Waiting for user registration'
+    
+    before do
+      visit root_path
+      click_link 'Facebook'
+      
+      current_path.should == dashboard_path
+
+      @user = User.first
+    end
+
+    it 'updates my nickname' do
+      @user.set(:nickname, 'juju')
+
+      click_link 'Profile'
+
+      fill_in 'Nickname', with: 'jujubear'
+      click_button 'save'
+
+      @user.reload
+      @user.nickname.should == 'jujubear'
+      current_path.should   == dashboard_path
+    end
+
   end
 
 end
