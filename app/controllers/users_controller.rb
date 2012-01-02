@@ -2,6 +2,12 @@ class UsersController < ApplicationController
   before_filter :force_user
 
   def dashboard
+    if session[:redirect_to]
+      redirect_path = session[:redirect_to]
+      session[:redirect_to] = nil
+
+      redirect_to redirect_path and return
+    end
   end
 
   def edit

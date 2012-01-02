@@ -1,4 +1,14 @@
+%h2 Profile Information
+
 = form_for @current_user do |f|
   = f.label :nickname
   = f.text_field :nickname
   = f.submit 'save'
+
+%h2 Oauth Providers
+
+- %w(facebook twitter).each do |provider_name|
+  - if @current_user.providers.map(&:name).include?(provider_name)
+    = link_to "Remove #{provider_name.titleize}", user_provider_path(@current_user, provider_name), method: :delete
+  - else
+    = link_to "Add #{provider_name.titleize}",    user_provider_path(@current_user, provider_name), method: :put

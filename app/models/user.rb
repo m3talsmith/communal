@@ -5,6 +5,7 @@ class User
   field :nickname
 
   embeds_many :providers
+
   class << self
     
     def from_provider(omniauth_hash)
@@ -18,5 +19,13 @@ class User
       return user
     end
 
+  end
+
+  def add_provider(omniauth_hash)
+    provider = omniauth_hash['provider']
+    uid      = omniauth_hash['uid']
+
+    providers.create name: provider, uid: uid
+    save
   end
 end

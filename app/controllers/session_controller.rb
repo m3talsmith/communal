@@ -1,7 +1,17 @@
 class SessionController < ApplicationController
 
+  def new
+    redirect_to "/auth/#{params[:provider]}"
+  end
+
   def create
-    user = User.from_provider(request.env['omniauth.auth']) if request.env['omniauth.auth']
+    if @current_user
+      @current_user.add_provider(request.env['omniauth.auth']) if request.env['omniauth.auth']
+      user = @current_user
+    else
+      user = User.from_provider(request.env['omniauth.auth']) if request.env['omniauth.auth']
+    end
+
     if user
       session[:user_id] = user.id
       redirect_to dashboard_path

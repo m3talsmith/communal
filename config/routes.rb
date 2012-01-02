@@ -1,7 +1,9 @@
 RebelFoundation::Application.routes.draw do
 
   # Users
-  resources :users
+  resources :users do
+    resources :providers, controller: 'users/providers'
+  end
   match '/dashboard' => 'users#dashboard', as: :dashboard
   match '/profile'   => 'users#edit',      as: :profile
 
