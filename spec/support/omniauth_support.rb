@@ -21,4 +21,10 @@ module OmniauthSupport
       'uid' => credentials[:uid]
     })
   end
+
+  def login_facebook
+    visit root_path
+    click_link 'Facebook'
+    return User.first
+  end
 end

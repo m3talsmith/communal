@@ -18,4 +18,6 @@
         - else
           %li= link_to 'Facebook', '/auth/facebook'
           %li= link_to 'Twitter', '/auth/twitter'
+    - flash.each do|(key, value)|
+      = content_tag :div, raw(value), class: 'message', id: "#{key}-message"
     = yield

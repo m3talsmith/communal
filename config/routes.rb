@@ -6,7 +6,9 @@ RebelFoundation::Application.routes.draw do
       get :update
       get :destroy
     end
+    resources :posts, controller: 'users/posts'
   end
+  # Applies to the logged in user
   match '/dashboard' => 'users#dashboard', as: :dashboard
   match '/profile'   => 'users#edit',      as: :profile
 
