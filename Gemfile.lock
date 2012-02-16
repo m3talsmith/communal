@@ -102,7 +102,7 @@ GEM
       haml (~> 3.0)
       railties (~> 3.0)
     hashie (1.2.0)
-    heroku (2.20.0)
+    heroku (2.20.1)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
       rubyzip
@@ -154,6 +154,9 @@ GEM
       rack
     omniauth-facebook (1.2.0)
       omniauth-oauth2 (~> 1.0.0)
+    omniauth-google-oauth2 (0.1.9)
+      omniauth (~> 1.0)
+      omniauth-oauth2
     omniauth-oauth (1.0.0)
       oauth
       omniauth (~> 1.0)
@@ -295,6 +298,7 @@ DEPENDENCIES
   mongoid-rspec
   omniauth
   omniauth-facebook
+  omniauth-google-oauth2
   omniauth-twitter
   rails (= 3.2.0)
   rails3-generators
