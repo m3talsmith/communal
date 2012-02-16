@@ -28,5 +28,5 @@ production:
     consumer_key: 56bbZ6YyVmInXmeTSeZMMg
     consumer_secret: Of10OJg8MH4t2NXBXZwkmFQmS8WoN6gkLxKEwChA
   google:
-    consumer_key: 618953607369.apps.googleusercontent.com
-    consumer_secret: oXof5eKdr3VfQYQIT-cYfoWu
+    consumer_key: 618953607369-tc3ipnuggd0k8cjrrta6f2g2q4g1sfhk.apps.googleusercontent.com
+    consumer_secret: a_ZHYdsnxv1YtU5CcBcIKwGe
