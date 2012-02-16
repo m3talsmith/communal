@@ -5,7 +5,7 @@ class User
   field :nickname
 
   embeds_many :providers
-  embeds_many :posts
+  has_many :posts
 
   class << self
     

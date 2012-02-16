@@ -6,7 +6,11 @@ RebelFoundation::Application.routes.draw do
       get :update
       get :destroy
     end
-    resources :posts, controller: 'users/posts'
+    resources :posts, controller: 'users/posts' do
+      collection do
+        get :drafts
+      end
+    end
   end
   # Applies to the logged in user
   match '/dashboard' => 'users#dashboard', as: :dashboard

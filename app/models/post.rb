@@ -5,7 +5,7 @@ class Post
   field :content
   field :published, type: Boolean, default: false
 
-  embedded_in :user
+  belongs_to :user
 
   scope :drafts, where(published: false)
 end

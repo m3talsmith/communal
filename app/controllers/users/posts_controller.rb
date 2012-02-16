@@ -1,5 +1,6 @@
 class Users::PostsController < UsersController
   before_filter :force_user
+  before_filter :set_public_user, only: [:index, :drafts]
   
   def new
     @post = @current_user.posts.new
@@ -13,6 +14,21 @@ class Users::PostsController < UsersController
       flash[:error] = "Your post wasn't saved"
       render :new
     end
+  end
+
+  def index
+    @posts = @user.posts.all
+  end
+
+  def drafts
+    @posts = @user.posts.drafts
+    render template: 'users/posts/index'
+  end
+
+private
+
+  def set_public_user
+    @user  = User.find params[:user_id]
   end
 
 end

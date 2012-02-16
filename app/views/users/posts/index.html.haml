@@ -1,0 +1,5 @@
+%h1 The ramblings of #{@user.nickname.present? ? @user.nickname : @user.id}
+
+.posts
+  - @posts.each do |post|
+    .post{class: (post.published? ? 'published' : 'draft')}

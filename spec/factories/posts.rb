@@ -2,5 +2,11 @@
 
 FactoryGirl.define do
   factory :post do
+    factory :draft_post do
+      published false
     end
+    factory :published_post do
+      published true
+    end
+  end
 end

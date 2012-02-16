@@ -25,9 +25,25 @@ describe 'User Posts' do
       page.should have_content('A new post has been drafted')
     end
 
-    it 'lists all drafts'
-    it 'views a draft'
-    it 'publishes a draft'
+    context 'that exists' do
+
+      before do
+        3.times {Factory.create :draft_post, user: @user}
+        3.times {Factory.create :published_post, user: @user}
+      end
+
+      it 'lists all drafts' do
+        click_link 'view drafts'
+
+        all('.post.draft').count.should         == 3
+        all('.post.published').count.should_not == 3
+        all('.post.published').count.should     == 0
+      end
+
+      it 'views a draft'
+      it 'publishes a draft'
+
+    end
 
   end
 
