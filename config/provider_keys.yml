@@ -5,6 +5,9 @@ development:
   twitter:
     consumer_key: bvRFWt6ZbF9LGV7PnA
     consumer_secret: l5GfIJGy3YOJwkw7YkvLu3m19oBYYCShE6WtmsLQXk
+  google:
+    consumer_key: 618953607369.apps.googleusercontent.com
+    consumer_secret: oXof5eKdr3VfQYQIT-cYfoWu
 
 test:
   facebook:
@@ -13,6 +16,9 @@ test:
   twitter:
     consumer_key: bvRFWt6ZbF9LGV7PnA
     consumer_secret: l5GfIJGy3YOJwkw7YkvLu3m19oBYYCShE6WtmsLQXk
+  google:
+    consumer_key: 618953607369.apps.googleusercontent.com
+    consumer_secret: oXof5eKdr3VfQYQIT-cYfoWu
 
 production:
   facebook:
@@ -21,3 +27,6 @@ production:
   twitter:
     consumer_key: 56bbZ6YyVmInXmeTSeZMMg
     consumer_secret: Of10OJg8MH4t2NXBXZwkmFQmS8WoN6gkLxKEwChA
+  google:
+    consumer_key: 618953607369.apps.googleusercontent.com
+    consumer_secret: oXof5eKdr3VfQYQIT-cYfoWu

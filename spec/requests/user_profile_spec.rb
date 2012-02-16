@@ -3,11 +3,13 @@ require 'spec_helper'
 describe 'User Profile' do
 
   context 'Registration' do
+    
+    before do
+      User.count.should == 0
+      visit root_path
+    end
 
     it 'uses facebook' do
-      User.count.should == 0
-      
-      visit root_path
       click_link 'Facebook'
 
       current_path.should == dashboard_path
@@ -19,9 +21,6 @@ describe 'User Profile' do
     end
 
     it 'uses twitter' do
-      User.count.should == 0
-      
-      visit root_path
       click_link 'Twitter'
 
       current_path.should == dashboard_path
@@ -32,7 +31,17 @@ describe 'User Profile' do
       page.should have_content("#{user.id} online")
     end
 
-    it 'uses google'
+    it 'uses google' do
+      click_link 'Google'
+
+      current_path.should == dashboard_path
+      User.count.should   == 1
+
+      user = User.first
+      user.providers.map(&:name).should include('google_oauth2')
+      page.should have_content("#{user.id} online")
+    end
+    
     it 'uses foursquare'
     it 'uses identity'
 

@@ -9,6 +9,10 @@ module OmniauthSupport
     twitter: {
       token: '207138975-fANDtQGW8B5U4VAQhQHrp1bViL4np17HRfeYDYs',
       uid:   '207138975'
+    },
+    google_oauth2: {
+      token: '4/fhPYIRPiUYi8X_vlp5Xdm6MTWQz_',
+      uid:   '110125115856743469268'
     }
   }
   
