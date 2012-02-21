@@ -23,8 +23,8 @@ class Users::PostsController < UsersController
   def update
     @post = @current_user.posts.find params[:id]
     if @post.update_attributes(params[:post])
-      flash[:notice] = "Post Updated"
-      redirect_to post_path(@current_user.post)
+      flash[:notice] = 'Post updated'
+      redirect_to [@current_user, @post]
     else
       render :edit
     end

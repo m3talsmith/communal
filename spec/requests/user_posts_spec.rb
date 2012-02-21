@@ -87,28 +87,24 @@ describe 'User Posts' do
       @draft_post.published.should be
       all('.post.published').count.should == 2
     end
+
+    context 'editing a post' do
+
+      before do
+        within('.draft') do
+          click_link 'edit'
+        end
+      end
     
-    it 'shows a link to edit each post' do
-      within('.post.published') do
-        page.should have_content('edit')
-        click_link 'edit'
+      it 'publishes post from drop down' do
+        select 'Published', from: 'Published'
+        click_button 'save'
         
-      current_path.should             == edit_user_post_path(@user, @post)
+        @draft_post.reload
+        @draft_post.published.should be
+        page.should have_content('Post updated')
+        current_path.should == user_post_path(@user, @draft_post)
       end
     end
-    
-    it 'saves an edited post' do
-      page.should have_content('Title')
-      
-      fill_in 'Title',   with: 'edit published test'
-      fill_in 'Content', with: 'Editing post'
-      click_button 'save'
-      
-      current_path.should             == update_user_post_path
-      @user.reload
-      @user.posts.count.should        == 2
-      page.should have_content('Post Updated')
-    end
-    
   end
 end

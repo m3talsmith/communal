@@ -8,4 +8,7 @@
       = f.label      :content
       = f.text_area  :content
     .row
+      = f.label      :published
+      = f.select     :published, [['Published', 'true'], ['Draft', 'false']]
+    .row
       = f.submit     'save'
