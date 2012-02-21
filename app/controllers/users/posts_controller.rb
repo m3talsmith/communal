@@ -15,6 +15,26 @@ class Users::PostsController < UsersController
       render :new
     end
   end
+  
+  def edit 
+    @post = @current_user.posts.find params[:id]
+  end
+  
+  def update
+    @post = @current_user.posts.find params[:id]
+    if @post.update_attributes(params[:post])
+      flash[:notice] = "Post Updated"
+      redirect_to post_path(@current_user.post)
+    else
+      render :edit
+    end
+  end
+  
+  def publish
+    @post = @current_user.posts.find params[:id]
+    @post.update_attribute :published, true
+    redirect_to :back, notice: "#{@post.title} has been published"
+  end
 
   def index
     @posts = @user.posts.all
