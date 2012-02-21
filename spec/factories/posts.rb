@@ -2,11 +2,15 @@
 
 FactoryGirl.define do
   factory :post do
+    title 'test post'
+    
     factory :draft_post do
       published false
     end
+    
     factory :published_post do
-      published true
+      published      true
+      published_date {Time.now}
     end
   end
 end

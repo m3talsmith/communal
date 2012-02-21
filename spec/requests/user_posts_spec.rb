@@ -46,5 +46,35 @@ describe 'User Posts' do
     end
 
   end
-
+  
+  context 'list all post' do
+    
+    before do
+      @post = Factory.create :published_post, user: @user
+      visit dashboard_path
+      click_link 'view my posts'
+    end
+    
+    it 'is on my posts path' do
+      current_path.should == user_posts_path(@user)
+    end
+    
+    it 'shows post title' do
+      page.should have_content(@post.title)
+    end
+    
+    it 'shows publish date' do
+      page.should have_content(@post.published_date)
+    end
+    
+    it 'shows create date' do
+      page.should have_content(@post.created_at)
+    end
+    
+    it 'shows publish status' do
+      within('.post') do
+        page.should have_content('Published')
+      end
+    end
+  end
 end
