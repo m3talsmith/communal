@@ -10,6 +10,9 @@ RebelFoundation::Application.routes.draw do
       collection do
         get :drafts
       end
+      member do
+        get :publish
+      end
     end
   end
   # Applies to the logged in user
