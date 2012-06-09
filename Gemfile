@@ -47,8 +47,6 @@ group :test, :development do
   gem 'launchy'
   gem 'database_cleaner'
   gem 'mongoid-rspec'
-  gem 'capistrano'
-  gem 'capistrano_colors'
   gem 'timecop'
   gem 'vcr'
   gem 'fakeweb'
