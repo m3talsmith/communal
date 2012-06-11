@@ -27,6 +27,8 @@ gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 
+gem 'therubyracer'
+
 gem 'airbrake'
 
 group :production do
